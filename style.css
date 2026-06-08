@@ -176,3 +176,15 @@ footer{
     color:#8cff98;
 }
 
+/*calculadora*/
+#custos {
+    margin-top: 50px;
+}
+
+#resultado-custos{
+    text-align:center;
+    font-size:18px;
+    margin-top:10px;
+    font-weight:bold;
+}
+
