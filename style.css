@@ -72,3 +72,45 @@ footer{
     text-align: center;
     padding: 20px;
 }
+/* Tema Claro */
+.light-theme {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.light-theme button {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* Tema Escuro */
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme button {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+/* Estilos Gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
