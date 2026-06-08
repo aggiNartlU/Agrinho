@@ -74,5 +74,6 @@ botaoCalc.addEventListener("click", () => {
 
     resultado.textContent =
         `Quantidade aproximada: ${Math.ceil(sementes)} sementes`;
+    });
 });
 
