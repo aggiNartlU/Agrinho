@@ -1,26 +1,53 @@
 const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
 
-// Carrega o tema salvo
-const savedTheme = localStorage.getItem("theme");
+// Carregar tema salvo
+const temaSalvo = localStorage.getItem("theme");
 
-if (savedTheme) {
-    body.className = savedTheme;
+if (temaSalvo) {
 
-    if (savedTheme === "dark-theme") {
-        toggleButton.textContent = "☀️ Tema Claro";
-    }
+    body.classList.remove("light-theme", "dark-theme");
+    body.classList.add(temaSalvo);
+
+    toggleButton.textContent =
+        temaSalvo === "dark-theme"
+        ? "☀️ Tema Claro"
+        : "🌙 Tema Escuro";
 }
 
-// Alterna entre tema claro e escuro
+// Alternar tema
+
 toggleButton.addEventListener("click", () => {
+
     if (body.classList.contains("light-theme")) {
-        body.classList.replace("light-theme", "dark-theme");
-        localStorage.setItem("theme", "dark-theme");
-        toggleButton.textContent = "☀️ Tema Claro";
+
+        body.classList.replace(
+            "light-theme",
+            "dark-theme"
+        );
+
+        localStorage.setItem(
+            "theme",
+            "dark-theme"
+        );
+
+        toggleButton.textContent =
+            "☀️ Tema Claro";
+
     } else {
-        body.classList.replace("dark-theme", "light-theme");
-        localStorage.setItem("theme", "light-theme");
-        toggleButton.textContent = "🌙 Tema Escuro";
+
+        body.classList.replace(
+            "dark-theme",
+            "light-theme"
+        );
+
+        localStorage.setItem(
+            "theme",
+            "light-theme"
+        );
+
+        toggleButton.textContent =
+            "🌙 Tema Escuro";
     }
+
 });

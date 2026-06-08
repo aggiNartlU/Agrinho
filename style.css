@@ -1,116 +1,177 @@
 /* RESET */
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 /* CORPO */
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4fff4;
-    color: #333;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    line-height:1.6;
+    transition:0.4s;
+}
+
+/* TEMA CLARO */
+
+.light-theme{
+    background:#f4fff4;
+    color:#222;
+}
+
+/* TEMA ESCURO */
+
+.dark-theme{
+    background:#121212;
+    color:white;
 }
 
 /* CABEÇALHO */
+
 header{
-    background-color: #2e7d32;
-    color: white;
-    text-align: center;
-    padding: 40px;
+    text-align:center;
+    padding:40px;
+    transition:0.4s;
 }
 
-header h1{
-    font-size: 40px;
-    margin-bottom: 10px;
+.light-theme header{
+    background:#2e7d32;
+    color:white;
+}
+
+.dark-theme header{
+    background:#1b1b1b;
+    color:#8cff98;
 }
 
 /* MENU */
+
 nav{
-    background-color: #1b5e20;
-    text-align: center;
-    padding: 15px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:15px;
+    transition:0.4s;
+}
+
+.light-theme nav{
+    background:#1b5e20;
+}
+
+.dark-theme nav{
+    background:#242424;
 }
 
 nav a{
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    font-weight: bold;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 nav a:hover{
-    color: #c8e6c9;
+    color:#8cff98;
+}
+
+/* BOTÃO */
+
+.tema-container{
+    text-align:center;
+    margin:25px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.light-theme button{
+    background:#222;
+    color:white;
+}
+
+.dark-theme button{
+    background:white;
+    color:#222;
 }
 
 /* SEÇÕES */
+
 section{
-    padding: 40px;
+    padding:40px;
+    max-width:1100px;
+    margin:auto;
 }
 
 section h2{
-    color: #2e7d32;
-    margin-bottom: 20px;
+    margin-bottom:20px;
 }
 
 /* IMAGENS */
-img{
-    border-radius: 10px;
-    margin: 10px;
+
+section img{
+    width:100%;
+    max-width:700px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.light-theme .card{
+    background:white;
+}
+
+.dark-theme .card{
+    background:#1e1e1e;
 }
 
 /* GALERIA */
-#galeria{
-    text-align: center;
+
+.galeria{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.galeria img{
+    width:300px;
+    height:200px;
+    object-fit:cover;
 }
 
 /* RODAPÉ */
+
 footer{
-    background-color: #1b5e20;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-/* Tema Claro */
-.light-theme {
-    background-color: #ffffff;
-    color: #222222;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    transition:0.4s;
 }
 
-.light-theme button {
-    background-color: #222222;
-    color: #ffffff;
+.light-theme footer{
+    background:#1b5e20;
+    color:white;
 }
 
-/* Tema Escuro */
-.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-.dark-theme button {
-    background-color: #ffffff;
-    color: #121212;
-}
-
-/* Estilos Gerais */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    transition: background-color 0.3s ease,
-                color 0.3s ease;
-}
-
-.container {
-    text-align: center;
-    padding: 50px;
-}
-
-button {
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.3s;
+.dark-theme footer{
+    background:#242424;
+    color:#8cff98;
 }
